@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meilleur ebook — Des guides qui changent la vie, dès le premier chapitre</title>
+  <meta name="description" content="Des ebooks pédagogiques pour toute la famille : éducation financière, parentalité, investissement. Catalogue sur meilleurebook.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ HEADER -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Meilleur<span>ebook</span></a>
+      <nav class="nav" id="nav">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ HERO -->
+  <section class="hero">
+    <div class="container hero__content">
+      <span class="hero__badge">✨ Ebooks pédagogiques</span>
+      <h1>Les savoirs que l'école<br />n'enseigne pas encore</h1>
+      <p class="hero__sub">
+        Des guides simples, concrets et accessibles — sur l'argent, la famille
+        et la vie — pour les enfants comme pour les adultes.
+      </p>
+      <div class="hero__actions">
+        <a href="#catalogue" class="btn btn--primary">Découvrir les ebooks</a>
+        <a href="#apropos" class="btn btn--ghost">En savoir plus</a>
+      </div>
+      <div class="hero__badges">
+        <span>📚 Guides illustrés</span>
+        <span>🎯 Par tranches d'âge</span>
+        <span>💛 Auteure francophone</span>
+        <span>⬇️ Téléchargement immédiat</span>
+      </div>
+    </div>
+    <div class="hero__wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdfaf4"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CATALOGUE -->
+  <section class="section catalogue" id="catalogue">
+    <div class="container">
+      <h2 class="section__title">Catalogue</h2>
+      <p class="section__sub">Filtre par thématique ou par tranche d'âge</p>
+
+      <!-- Filtres thématiques -->
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="tous">Tous</button>
+        <button class="filter-btn" data-filter="famille-enfants">Famille &amp; Enfants</button>
+        <button class="filter-btn" data-filter="finance-adultes">Finance Adultes</button>
+        <button class="filter-btn" data-filter="entrepreneuriat">Entrepreneuriat</button>
+        <button class="filter-btn" data-filter="bien-etre">Bien-être</button>
+      </div>
+
+      <!-- Filtres par âge -->
+      <div class="age-filters" id="age-filters">
+        <span class="age-label">Âge :</span>
+        <button class="age-btn active" data-age="tous">Tous</button>
+        <button class="age-btn" data-age="7-12">7–12 ans</button>
+        <button class="age-btn" data-age="13-17">13–17 ans</button>
+        <button class="age-btn" data-age="adultes">Adultes</button>
+      </div>
+
+      <!-- Grille des ebooks -->
+      <div class="books-grid" id="books-grid">
+
+        <!-- ebook 1 : Les Secrets de l'Argent -->
+        <article class="book-card" data-category="famille-enfants" data-age="7-12">
+          <div class="book-card__cover" style="background: linear-gradient(135deg, #c9a84c 0%, #f5d97e 50%, #a07830 100%);">
+            <div class="book-card__cover-inner">
+              <p class="book-cover__series">Collection Savoir Jeunesse</p>
+              <h3 class="book-cover__title">Les Secrets<br />de l'Argent</h3>
+              <p class="book-cover__sub">À Savoir Dès 7 Ans</p>
+              <p class="book-cover__author">Tracy by MANDÉ</p>
+            </div>
+            <div class="book-card__badge">Disponible</div>
+          </div>
+          <div class="book-card__body">
+            <div class="book-card__tags">
+              <span class="tag tag--age">7–12 ans</span>
+              <span class="tag tag--theme">Finance</span>
+            </div>
+            <h3 class="book-card__title">Les Secrets de l'Argent — À Savoir Dès 7 Ans</h3>
+            <p class="book-card__desc">
+              Noa, Liam, Médrick et Énola découvrent d'où vient l'argent, comment le gérer
+              et le faire grandir. Une histoire captivante avec des activités concrètes.
+            </p>
+            <ul class="book-card__points">
+              <li>8 chapitres illustrés</li>
+              <li>Activités à imprimer</li>
+              <li>Méthode des 3 tirelires</li>
+            </ul>
+            <div class="book-card__footer">
+              <span class="price"><!-- [PRIX à définir] --><span class="price__note">Prix à venir</span></span>
+              <a href="#contact" class="btn btn--primary btn--sm">Je veux l'ebook →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ebook 2 : Femmes & Bourse (à venir) -->
+        <article class="book-card book-card--coming" data-category="finance-adultes" data-age="adultes">
+          <div class="book-card__cover" style="background: linear-gradient(135deg, #2d4a3e 0%, #4a7c68 50%, #1a2e26 100%);">
+            <div class="book-card__cover-inner">
+              <p class="book-cover__series">Collection Finance &amp; Liberté</p>
+              <h3 class="book-cover__title">Femmes<br />&amp; Bourse</h3>
+              <p class="book-cover__sub">Investir sans peur, dès aujourd'hui</p>
+              <p class="book-cover__author">Tracy by MANDÉ</p>
+            </div>
+            <div class="book-card__badge book-card__badge--soon">Bientôt</div>
+          </div>
+          <div class="book-card__body">
+            <div class="book-card__tags">
+              <span class="tag tag--age">Adultes</span>
+              <span class="tag tag--theme">Investissement</span>
+            </div>
+            <h3 class="book-card__title">Femmes &amp; Bourse — Investir sans peur</h3>
+            <p class="book-card__desc">
+              Un guide pratique sur l'investissement en bourse, pensé pour les femmes
+              francophones. Sans jargon, avec des étapes claires et des témoignages réels.
+            </p>
+            <ul class="book-card__points">
+              <li>Zéro jargon technique</li>
+              <li>Commencer avec 50 €/mois</li>
+              <li>Témoignages de femmes</li>
+            </ul>
+            <div class="book-card__footer">
+              <span class="price"><span class="price__note">En cours de rédaction</span></span>
+              <a href="#contact" class="btn btn--ghost btn--sm">Être notifiée →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ebook 3 : Budget Famille (à venir) -->
+        <article class="book-card book-card--coming" data-category="famille-enfants" data-age="adultes">
+          <div class="book-card__cover" style="background: linear-gradient(135deg, #7b4fa6 0%, #b07fd4 50%, #5a3070 100%);">
+            <div class="book-card__cover-inner">
+              <p class="book-cover__series">Collection Famille Sereine</p>
+              <h3 class="book-cover__title">Budget<br />Famille</h3>
+              <p class="book-cover__sub">Sans sacrifier le plaisir</p>
+              <p class="book-cover__author">Tracy by MANDÉ</p>
+            </div>
+            <div class="book-card__badge book-card__badge--soon">Bientôt</div>
+          </div>
+          <div class="book-card__body">
+            <div class="book-card__tags">
+              <span class="tag tag--age">Adultes</span>
+              <span class="tag tag--theme">Famille</span>
+            </div>
+            <h3 class="book-card__title">Budget Famille — Sans Sacrifier le Plaisir</h3>
+            <p class="book-card__desc">
+              Comment organiser les finances d'une famille sans stress ni privation.
+              Des méthodes simples adaptées aux familles francophones.
+            </p>
+            <ul class="book-card__points">
+              <li>Fiches budgétaires à imprimer</li>
+              <li>Méthodes éprouvées</li>
+              <li>Adapté aux familles recomposées</li>
+            </ul>
+            <div class="book-card__footer">
+              <span class="price"><span class="price__note">Prochainement</span></span>
+              <a href="#contact" class="btn btn--ghost btn--sm">Être notifiée →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Message "aucun résultat" -->
+      <p class="no-results" id="no-results" style="display:none;">
+        Aucun ebook trouvé pour cette sélection. D'autres titres arrivent bientôt ! 🌱
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CITATION -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        "L'argent est un outil. Plus tôt on apprend à s'en servir,
+        mieux on construit sa vie."
+        <cite>— Tracy by MANDÉ</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ À PROPOS -->
+  <section class="section apropos" id="apropos">
+    <div class="container apropos__inner">
+      <div class="apropos__image-wrap">
+        <div class="apropos__image-placeholder">
+          <span>📷</span>
+          <p>Ajouter ta photo ici</p>
+        </div>
+      </div>
+      <div class="apropos__text">
+        <span class="section__badge">À propos</span>
+        <h2>Qui est Tracy ?</h2>
+        <p>
+          Je suis Tracy, créatrice de <strong>Tracy by MANDÉ</strong>.
+          Passionnée par l'éducation, l'entrepreneuriat et l'autonomie financière,
+          j'ai créé cette collection pour partager des outils simples, concrets
+          et accessibles — sur des sujets que l'école n'enseigne pas assez.
+        </p>
+        <p>
+          <em>Les Secrets de l'Argent</em> est né d'une conviction profonde :
+          les enfants qui comprennent l'argent tôt deviennent des adultes plus libres,
+          plus généreux et plus confiants.
+        </p>
+        <p class="apropos__note">
+          ✏️ <em>Remplace ce texte par ta vraie bio.</em>
+        </p>
+        <div class="apropos__socials">
+          <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link">📸 Instagram</a>
+          <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link">📘 Facebook</a>
+          <a href="mailto:mandemwen@gmail.com" class="social-link">📧 Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <h2 class="section__title">Restons en contact 💛</h2>
+      <p class="section__sub">
+        Une question ? Envie d'être notifiée des prochaines sorties ?
+        Je lis tous mes messages et réponds personnellement.
+      </p>
+      <div class="contact__cards">
+        <a href="mailto:mandemwen@gmail.com" class="contact-card">
+          <span class="contact-card__icon">📧</span>
+          <span class="contact-card__label">Email</span>
+          <span class="contact-card__value">mandemwen@gmail.com</span>
+        </a>
+        <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">📸</span>
+          <span class="contact-card__label">Instagram</span>
+          <span class="contact-card__value">@TRACY_BY_MANDE</span>
+        </a>
+        <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">📘</span>
+          <span class="contact-card__label">Facebook</span>
+          <span class="contact-card__value">TRACY_BY_MANDE</span>
+        </a>
+        <a href="https://meilleurebook.com" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-card__icon">🌐</span>
+          <span class="contact-card__label">Site web</span>
+          <span class="contact-card__value">meilleurebook.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__logo">Meilleur<span>ebook</span></p>
+      <p class="footer__tagline">Des guides qui changent la vie — pour les enfants comme pour les adultes.</p>
+      <nav class="footer__nav">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:mandemwen@gmail.com">Email</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Meilleur ebook — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
