@@ -7,6 +7,7 @@
   <meta name="description" content="Des ebooks pédagogiques pour toute la famille : éducation financière, parentalité, investissement. Catalogue sur meilleurebook.com." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -14,10 +15,12 @@
   <!-- ═══════════════════════════════════════════ HEADER -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="#top" class="logo">Meilleur<span>ebook</span></a>
+      <a href="#top" class="logo">Meilleur<span>ebook</span><span class="logo__com">.com</span></a>
       <nav class="nav" id="nav">
-        <a href="#catalogue">Catalogue</a>
+        <a href="#ebooks">Ebooks</a>
         <a href="#apropos">À propos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rdv">RDV</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="burger" id="burger" aria-label="Menu">
@@ -29,11 +32,10 @@
   <!-- ═══════════════════════════════════════════ HERO -->
   <section class="hero">
     <div class="container hero__content">
-      <span class="hero__badge">Ebooks pédagogiques</span>
-      <h1>Les savoirs que l'école<br />n'enseigne pas encore</h1>
+      <span class="hero__badge">Ebooks ludopédagogiques</span>
+      <h1>LIS.GRANDIS.RÉUSSIS</h1>
       <p class="hero__sub">
-        Des guides simples, concrets et accessibles — sur l'argent, la famille
-        et la vie — pour les enfants comme pour les adultes.
+        Des livres courts et puissants — sur l'argent, la famille et le bien-être — pour tous les âges.
       </p>
       <div class="hero__actions">
         <a href="#catalogue" class="btn btn--primary">Découvrir les ebooks</a>
@@ -41,48 +43,38 @@
       </div>
       <div class="hero__badges">
         <span>Guides illustrés</span>
-        <span>Par tranches d'âge</span>
+        <span>Tout âge</span>
         <span>Auteure francophone</span>
         <span>Téléchargement immédiat</span>
       </div>
     </div>
     <div class="hero__wave">
       <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdfaf4"/>
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#faf8f5"/>
       </svg>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ CATALOGUE -->
-  <section class="section catalogue" id="catalogue">
+  <section class="section catalogue" id="ebooks">
     <div class="container">
-      <h2 class="section__title">Catalogue</h2>
-      <p class="section__sub">Filtre par thématique ou par tranche d'âge</p>
+      <h2 class="section__title">Ebooks</h2>
 
       <!-- Filtres thématiques -->
       <div class="filters" id="filters">
         <button class="filter-btn active" data-filter="tous">Tous</button>
-        <button class="filter-btn" data-filter="famille-enfants">Famille &amp; Enfants</button>
-        <button class="filter-btn" data-filter="finance-adultes">Finance Adultes</button>
-        <button class="filter-btn" data-filter="entrepreneuriat">Entrepreneuriat</button>
         <button class="filter-btn" data-filter="bien-etre">Bien-être</button>
-      </div>
-
-      <!-- Filtres par âge -->
-      <div class="age-filters" id="age-filters">
-        <span class="age-label">Âge :</span>
-        <button class="age-btn active" data-age="tous">Tous</button>
-        <button class="age-btn" data-age="7-12">7–12 ans</button>
-        <button class="age-btn" data-age="13-17">13–17 ans</button>
-        <button class="age-btn" data-age="adultes">Adultes</button>
+        <button class="filter-btn" data-filter="finances-richesses">Finances &amp; Richesses</button>
+        <button class="filter-btn" data-filter="entrepreneuriat">Travail et Entrepreneuriat</button>
+        <button class="filter-btn" data-filter="mindset">Mindset</button>
       </div>
 
       <!-- Grille des ebooks -->
       <div class="books-grid" id="books-grid">
 
         <!-- ebook 1 : Les Secrets de l'Argent -->
-        <article class="book-card" data-category="famille-enfants" data-age="7-12">
-          <div class="book-card__cover" style="background: linear-gradient(135deg, #c8874e 0%, #f0cfa0 50%, #96612e 100%);">
+        <article class="book-card" data-category="finances-richesses" data-age="7-12">
+          <div class="book-card__cover" style="background: linear-gradient(135deg, #D97757 0%, #f5c4ae 50%, #b05838 100%);">
             <div class="book-card__cover-inner">
               <p class="book-cover__series">Collection Savoir Jeunesse</p>
               <h3 class="book-cover__title">Les Secrets<br />de l'Argent</h3>
@@ -93,7 +85,6 @@
           </div>
           <div class="book-card__body">
             <div class="book-card__tags">
-              <span class="tag tag--age">7–12 ans</span>
               <span class="tag tag--theme">Finance</span>
             </div>
             <h3 class="book-card__title">Les Secrets de l'Argent — À Savoir Dès 7 Ans</h3>
@@ -114,7 +105,7 @@
         </article>
 
         <!-- ebook 2 : Femmes & Bourse (à venir) -->
-        <article class="book-card book-card--coming" data-category="finance-adultes" data-age="adultes">
+        <article class="book-card book-card--coming" data-category="finances-richesses" data-age="adultes">
           <div class="book-card__cover" style="background: linear-gradient(135deg, #2d4a3e 0%, #4a7c68 50%, #1a2e26 100%);">
             <div class="book-card__cover-inner">
               <p class="book-cover__series">Collection Finance &amp; Liberté</p>
@@ -126,7 +117,6 @@
           </div>
           <div class="book-card__body">
             <div class="book-card__tags">
-              <span class="tag tag--age">Adultes</span>
               <span class="tag tag--theme">Investissement</span>
             </div>
             <h3 class="book-card__title">Femmes &amp; Bourse — Investir sans peur</h3>
@@ -141,14 +131,14 @@
             </ul>
             <div class="book-card__footer">
               <span class="price"><span class="price__note">En cours de rédaction</span></span>
-              <a href="#contact" class="btn btn--ghost btn--sm">Être notifiée →</a>
+              <a href="#contact" class="btn btn--ghost btn--sm">Je réserve →</a>
             </div>
           </div>
         </article>
 
         <!-- ebook 3 : Budget Famille (à venir) -->
-        <article class="book-card book-card--coming" data-category="famille-enfants" data-age="adultes">
-          <div class="book-card__cover" style="background: linear-gradient(135deg, #7b4fa6 0%, #b07fd4 50%, #5a3070 100%);">
+        <article class="book-card book-card--coming" data-category="bien-etre" data-age="adultes">
+          <div class="book-card__cover" style="background: linear-gradient(135deg, #b5832a 0%, #d4a84c 50%, #8a6018 100%);">
             <div class="book-card__cover-inner">
               <p class="book-cover__series">Collection Famille Sereine</p>
               <h3 class="book-cover__title">Budget<br />Famille</h3>
@@ -159,7 +149,6 @@
           </div>
           <div class="book-card__body">
             <div class="book-card__tags">
-              <span class="tag tag--age">Adultes</span>
               <span class="tag tag--theme">Famille</span>
             </div>
             <h3 class="book-card__title">Budget Famille — Sans Sacrifier le Plaisir</h3>
@@ -174,7 +163,7 @@
             </ul>
             <div class="book-card__footer">
               <span class="price"><span class="price__note">Prochainement</span></span>
-              <a href="#contact" class="btn btn--ghost btn--sm">Être notifiée →</a>
+              <a href="#contact" class="btn btn--ghost btn--sm">Je réserve →</a>
             </div>
           </div>
         </article>
@@ -192,9 +181,9 @@
   <section class="quote-section">
     <div class="container">
       <blockquote>
-        "L'argent est un outil. Plus tôt on apprend à s'en servir,
-        mieux on construit sa vie."
-        <cite>— Tracy by MANDÉ</cite>
+        "Tu n'as pas besoin d'être prêt.
+        Tu as besoin de savoir par où commencer."
+        <cite>— Tracy Dormiola</cite>
       </blockquote>
     </div>
   </section>
@@ -225,11 +214,55 @@
           <em>Remplace ce texte par ta vraie bio.</em>
         </p>
         <div class="apropos__socials">
-          <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link">Instagram</a>
-          <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link">Facebook</a>
-          <a href="mailto:mandemwen@gmail.com" class="social-link">Email</a>
+          <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link social-link--insta"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="social-link social-link--fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a href="https://www.linkedin.com/in/tracybymande" target="_blank" rel="noopener" class="social-link social-link--li"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.tiktok.com/@tracybymande" target="_blank" rel="noopener" class="social-link social-link--tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <h2 class="section__title">Questions fréquentes</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Comment télécharger mon ebook après l'achat ?</summary>
+          <p>Dès ta commande validée, tu reçois un email avec un lien de téléchargement immédiat. Le fichier PDF est compatible avec tous les appareils : smartphone, tablette, ordinateur.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Les ebooks sont-ils adaptés à tous les niveaux ?</summary>
+          <p>Oui. Chaque guide est écrit en langage clair, sans jargon. Que tu sois débutant ou déjà sensibilisé au sujet, tu trouveras des clés actionnables dès la première lecture.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Puis-je offrir un ebook en cadeau ?</summary>
+          <p>Absolument. Après l'achat, tu reçois un fichier PDF que tu peux transmettre directement à la personne de ton choix par email ou messagerie.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Comment être informé(e) des nouvelles sorties ?</summary>
+          <p>Suis-nous sur Instagram ou Facebook, ou écris-nous par email pour être ajouté(e) à la liste de pré-lancement. Tu seras prévenu(e) en avant-première.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Y a-t-il un remboursement possible ?</summary>
+          <p>En raison de la nature numérique du produit, les ebooks ne sont pas remboursables une fois téléchargés. En cas de problème technique, contacte-nous — nous trouvons toujours une solution.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ RDV -->
+  <section class="section rdv" id="rdv">
+    <div class="container rdv__inner">
+      <h2 class="section__title">Prendre rendez-vous</h2>
+      <p class="rdv__desc">
+        Tu as une question sur un ebook, tu veux un accompagnement personnalisé
+        ou simplement échanger ? Réserve un créneau directement dans mon agenda.
+      </p>
+      <a href="https://calendly.com/tracybymande" target="_blank" rel="noopener" class="rdv__btn">
+        <i class="fa-regular fa-calendar"></i> Réserver un créneau
+      </a>
     </div>
   </section>
 
@@ -243,25 +276,21 @@
       </p>
       <div class="contact__cards">
         <a href="mailto:mandemwen@gmail.com" class="contact-card">
-          <span class="contact-card__abbr">@</span>
+          <span class="contact-card__abbr"><i class="fa-solid fa-envelope"></i></span>
           <span class="contact-card__label">Email</span>
           <span class="contact-card__value">mandemwen@gmail.com</span>
         </a>
-        <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-card__abbr">IG</span>
-          <span class="contact-card__label">Instagram</span>
-          <span class="contact-card__value">@TRACY_BY_MANDE</span>
-        </a>
-        <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-card__abbr">FB</span>
-          <span class="contact-card__label">Facebook</span>
-          <span class="contact-card__value">TRACY_BY_MANDE</span>
-        </a>
-        <a href="mailto:mandemwen@gmail.com" class="contact-card">
-          <span class="contact-card__abbr">WA</span>
+        <a href="https://wa.me/" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-card__abbr contact-card__abbr--wa"><i class="fa-brands fa-whatsapp"></i></span>
           <span class="contact-card__label">WhatsApp Business</span>
           <span class="contact-card__value">Ajouter ton numéro</span>
         </a>
+      </div>
+      <div class="contact__socials">
+        <a href="https://www.instagram.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-social contact-social--insta"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TRACY_BY_MANDE" target="_blank" rel="noopener" class="contact-social contact-social--fb"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/tracybymande" target="_blank" rel="noopener" class="contact-social contact-social--li"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@tracybymande" target="_blank" rel="noopener" class="contact-social contact-social--tiktok"><i class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
   </section>
@@ -269,15 +298,16 @@
   <!-- ═══════════════════════════════════════════ FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__logo">Meilleur<span>ebook</span></p>
+      <p class="footer__logo">Meilleur<span>ebook</span><span class="logo__com">.com</span></p>
       <p class="footer__tagline">Des guides qui changent la vie — pour les enfants comme pour les adultes.</p>
       <nav class="footer__nav">
-        <a href="#catalogue">Catalogue</a>
+        <a href="#ebooks">Ebooks</a>
         <a href="#apropos">À propos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rdv">RDV</a>
         <a href="#contact">Contact</a>
-        <a href="mailto:mandemwen@gmail.com">Email</a>
       </nav>
-      <p class="footer__copy">© <span id="year"></span> Meilleur ebook — Tous droits réservés.</p>
+      <p class="footer__copy">© <span id="year"></span> meilleurebook.com — Tous droits réservés.</p>
     </div>
   </footer>
 

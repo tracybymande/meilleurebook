@@ -17,20 +17,16 @@ burger.addEventListener('click', () => {
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
 // ── Filtres catalogue ──
-const filterBtns  = document.querySelectorAll('.filter-btn');
-const ageBtns     = document.querySelectorAll('.age-btn');
-const cards       = document.querySelectorAll('.book-card');
-const noResults   = document.getElementById('no-results');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards      = document.querySelectorAll('.book-card');
+const noResults  = document.getElementById('no-results');
 
 let activeCategory = 'tous';
-let activeAge      = 'tous';
 
 function applyFilters() {
   let visible = 0;
   cards.forEach(card => {
-    const catMatch = activeCategory === 'tous' || card.dataset.category === activeCategory;
-    const ageMatch = activeAge === 'tous'      || card.dataset.age      === activeAge;
-    const show = catMatch && ageMatch;
+    const show = activeCategory === 'tous' || card.dataset.category === activeCategory;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
@@ -42,15 +38,6 @@ filterBtns.forEach(btn => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeCategory = btn.dataset.filter;
-    applyFilters();
-  });
-});
-
-ageBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    ageBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeAge = btn.dataset.age;
     applyFilters();
   });
 });
