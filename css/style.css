@@ -4,19 +4,19 @@
 
 /* ── Variables ──────────────────────────────────────────── */
 :root {
-  --gold:        #c9a84c;
-  --gold-light:  #f5d97e;
-  --gold-dark:   #a07830;
-  --cream:       #fdfaf4;
-  --cream-dark:  #f5f0e6;
-  --dark:        #1a1612;
-  --dark-soft:   #2e2720;
-  --text:        #3d342a;
-  --text-light:  #7a6b5a;
+  --gold:        #c8874e;
+  --gold-light:  #f0cfa0;
+  --gold-dark:   #96612e;
+  --cream:       #faf5ee;
+  --cream-dark:  #f2e8d9;
+  --dark:        #2c1a0e;
+  --dark-soft:   #3d2b1f;
+  --text:        #4a3728;
+  --text-light:  #8a6e58;
   --white:       #ffffff;
-  --shadow-sm:   0 2px 8px rgba(0,0,0,.08);
-  --shadow-md:   0 8px 32px rgba(0,0,0,.12);
-  --shadow-lg:   0 20px 60px rgba(0,0,0,.15);
+  --shadow-sm:   0 2px 8px rgba(44,26,14,.07);
+  --shadow-md:   0 8px 32px rgba(44,26,14,.11);
+  --shadow-lg:   0 20px 60px rgba(44,26,14,.14);
   --radius:      12px;
   --radius-lg:   20px;
   --transition:  .25s ease;
@@ -189,7 +189,7 @@ h1, h2, h3, h4 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-soft) 50%, #3a2e22 100%);
+  background: linear-gradient(160deg, #2c1a0e 0%, #3d2b1f 45%, #5a3d28 100%);
   padding-top: 68px;
   overflow: hidden;
 }
@@ -541,7 +541,7 @@ h1, h2, h3, h4 {
   color: var(--text-light);
   font-size: .875rem;
 }
-.apropos__image-placeholder span { font-size: 3rem; margin-bottom: .5rem; }
+.apropos__photo-label { font-size: .85rem; font-weight: 600; color: var(--text-light); letter-spacing: .06em; text-transform: uppercase; }
 
 .apropos__text h2 {
   font-size: clamp(1.8rem, 3.5vw, 2.4rem);
@@ -615,7 +615,17 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
 }
-.contact-card__icon { font-size: 1.75rem; }
+.contact-card__abbr {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  border: 1.5px solid var(--gold-light);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: .78rem; font-weight: 700;
+  color: var(--gold-dark);
+  letter-spacing: .05em;
+}
 .contact-card__label { font-size: .75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .08em; }
 .contact-card__value { font-size: .9rem; font-weight: 600; color: var(--dark); }
 
