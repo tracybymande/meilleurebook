@@ -544,6 +544,15 @@ h1, h2, h3, h4 {
 
 .apropos__image-wrap { display: flex; justify-content: center; }
 
+.apropos__photo {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
 .apropos__image-placeholder {
   width: 260px; height: 320px;
   border-radius: var(--radius-lg);
