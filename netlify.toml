@@ -1,0 +1,41 @@
+# Configuration Netlify — meilleurebook.com
+
+[build]
+  publish = "."
+
+# En-têtes de sécurité de base pour toutes les pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# HTML : pas de cache long, contenu qui bouge
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Assets statiques : cache long (à réajuster si les fichiers changent souvent)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Emplacement des futures fonctions serverless (webhook Stripe, etc.)
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

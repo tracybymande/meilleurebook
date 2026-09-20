@@ -1,0 +1,32 @@
+# Environnement et secrets — JAMAIS commiter
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Netlify local
+.netlify/
+netlify/functions-serve/
+
+# Node (au cas où on ajouterait des fonctions serverless en JS/TS)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
