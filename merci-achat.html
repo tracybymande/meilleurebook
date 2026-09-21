@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merci pour ton achat ! — Meilleurebook.com</title>
+  <meta name="description" content="Ton workbook L'Entre-Saison dans le business est prêt au téléchargement." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KFNPJ2SM');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFNPJ2SM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="/" class="logo">Meilleur<span>ebook</span><span class="logo__com">.com</span></a>
+    </div>
+  </header>
+
+  <main class="section" style="min-height:60vh;display:flex;align-items:center;">
+    <div class="container" style="max-width:640px;text-align:center;">
+      <span class="hero__badge">Paiement validé</span>
+      <h1 style="font-family:'Playfair Display',serif;margin:1rem 0 1.5rem;">Merci pour ton achat !</h1>
+      <p style="font-size:1.125rem;line-height:1.6;">
+        Ton workbook <em>L'Entre-Saison dans le business</em> t'attend.
+        Un email de confirmation partira aussi vers ta boîte dans quelques instants.
+      </p>
+
+      <div style="margin:2.5rem 0;">
+        <a id="download-btn" class="btn btn--primary" href="#" style="font-size:1.125rem;padding:1rem 2rem;">
+          <i class="fas fa-file-arrow-down" style="margin-right:.5rem;"></i>
+          Télécharger le workbook (PDF)
+        </a>
+        <p id="download-help" style="margin-top:1rem;font-size:.95rem;color:#666;">
+          Le lien reste valide tant que ta commande l'est.
+        </p>
+      </div>
+
+      <div style="border-top:1px solid #eee;padding-top:2rem;margin-top:2rem;">
+        <p style="font-size:.95rem;color:#666;">
+          Une question ?
+          Écris à <a href="mailto:support@meilleurebook.com">support@meilleurebook.com</a> — réponse sous 5 jours ouvrés.
+        </p>
+        <p style="margin-top:1rem;">
+          <a href="/" style="color:#D97757;text-decoration:none;">← Retour à l'accueil</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+    const btn = document.getElementById('download-btn');
+    const help = document.getElementById('download-help');
+
+    if (sessionId) {
+      btn.href = `/.netlify/functions/download?session_id=${encodeURIComponent(sessionId)}`;
+      // Push event to dataLayer for GA4/Meta tracking
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'purchase_landing',
+        transaction_id: sessionId,
+      });
+    } else {
+      btn.style.display = 'none';
+      help.textContent = "Aucune commande détectée. Si tu penses qu'il y a une erreur, écris à support@meilleurebook.com.";
+    }
+  </script>
+</body>
+</html>

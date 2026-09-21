@@ -1,0 +1,9 @@
+{
+  "name": "meilleurebook-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site meilleurebook.com + fonctions serverless (checkout Stripe, webhook, téléchargement).",
+  "dependencies": {
+    "stripe": "^14.10.0"
+  }
+}
